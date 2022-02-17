@@ -39,7 +39,7 @@ public class prueba extends JFrame {
                 try{
                     Class.forName("org.postgresql.Driver");
                     con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/clinica",user,pass);
-                    String sql= "SELECT * FROM \"Usuarios\" WHERE usuario ='"+usuario1+"' and password= '"+password1+"'";
+                    String sql= "SELECT * FROM \"Usuarios\" WHERE Usuario ='"+usuario1+"' and password= '"+password1+"'";
                     Statement st = con.createStatement();
                     ResultSet sr= st.executeQuery(sql);
                     if(sr.next()){
